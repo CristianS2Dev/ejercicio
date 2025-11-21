@@ -1,1 +1,1 @@
-{"version":3,"file":"ICleanable.d.ts","sourceRoot":"","sources":["../../../src/ejercicio4/interfaces/ICleanable.ts"],"names":[],"mappings":"AAAA;;;;;GAKG;AAEH,MAAM,WAAW,UAAU;IACvB,KAAK,IAAI,IAAI,CAAC;IACd,uBAAuB,IAAI,MAAM,CAAC;CACrC"}
+{"version":3,"file":"ICleanable.d.ts","sourceRoot":"","sources":["../../../src/ejercicio4/interfaces/ICleanable.ts"],"names":[],"mappings":"AAGA,MAAM,WAAW,UAAU;IACvB,KAAK,IAAI,IAAI,CAAC;IACd,uBAAuB,IAAI,MAAM,CAAC;CACrC"}

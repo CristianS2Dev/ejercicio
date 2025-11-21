@@ -36,7 +36,7 @@ export declare class ProductionMachine extends Machine implements IRunnable, ICl
  * Máquina que solo puede ejecutarse
  */
 export declare class MonitoringMachine extends Machine implements IRunnable {
-    private isRunning;
+    isRunning: boolean;
     run(): void;
     stop(): void;
 }

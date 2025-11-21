@@ -6,9 +6,9 @@ export class Admin extends User {
     private department: string;
 
     constructor(name: string, email: string, department: string) {
-        super(name, email); // Llamar al constructor de User
+        super(name, email); 
         this.department = department;
-        // Admin tiene todos los permisos
+
         this.permissions = {
             canEdit: true,
             canDelete: true,
@@ -17,24 +17,21 @@ export class Admin extends User {
         };
     }
 
-    // Sobrescribir método getRole (polimorfismo)
     getRole(): string {
         return "Administrador";
     }
 
-    // Método específico de Admin
     manageUsers(): void {
         console.log(`   ${this.name} está gestionando usuarios del departamento ${this.department}`);
     }
 
-    // Método para mostrar permisos
+
     showPermissions(): void {
         console.log(`   Permisos:`, this.permissions);
     }
 
-    // Sobrescribir displayInfo para agregar información específica
     displayInfo(): void {
-        super.displayInfo(); // Llamar al método de la clase padre
+        super.displayInfo(); 
         console.log(`   Departamento: ${this.department}`);
         this.showPermissions();
     }

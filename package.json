@@ -5,10 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "ejercicio1": "tsc src/ejercicio1/ejercicio1.ts && node src/ejercicio1/ejercicio1.js",
-    "ejercicio2": "tsc src/ejercicio2/ejercicio2.ts && node src/ejercicio2/ejercicio2.js",
-    "ejercicio3": "tsc src/ejercicio3/ejercicio3.ts && node src/ejercicio3/ejercicio3.js",
-    "ejercicio4": "tsc && node dist/ejercicio4/main.js",
+    "ejercicio1": "ts-node src/ejercicio1/ejercicio1.ts",
+    "ejercicio2": "ts-node src/ejercicio2/ejercicio2.ts",
+    "ejercicio3": "ts-node src/ejercicio3/ejercicio3.ts",
+    "ejercicio4": "ts-node src/ejercicio4/ejercicio4.ts",
     "clean": "rimraf dist"
   },
   "keywords": [
@@ -21,6 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }

@@ -16,18 +16,18 @@ export class Client extends User {
         this.isVIP = false;
     }
 
-    // Sobrescribir método getRole
+   
     getRole(): string {
         return this.isVIP ? "Cliente VIP" : "Cliente";
     }
 
-    // Método específico de Client
+
     makePurchase(amount: number): void {
         this.purchaseInfo.totalPurchases++;
         this.purchaseInfo.totalSpent += amount;
        
         
-        // Actualizar estado VIP si gasta más de $1000
+      
         if (this.purchaseInfo.totalSpent >= 1000) {
             this.isVIP = true;
         }
@@ -36,12 +36,12 @@ export class Client extends User {
         console.log(`   Puntos ganados: ${Math.floor(amount / 10)}`);
     }
 
-    // Método para obtener descuento según sea VIP
+    
     getDiscount(): number {
         return this.isVIP ? 20 : 5;
     }
 
-    // Mostrar historial de compras
+ 
     showPurchaseHistory(): void {
         console.log(`   Compras totales: ${this.purchaseInfo.totalPurchases}`);
 
@@ -50,7 +50,6 @@ export class Client extends User {
         console.log(`   Descuento actual: ${this.getDiscount()}%`);
     }
 
-    // Sobrescribir displayInfo
     displayInfo(): void {
         super.displayInfo();
         this.showPurchaseHistory();

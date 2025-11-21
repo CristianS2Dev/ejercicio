@@ -27,7 +27,7 @@ class CorrectiveMaintenance extends Maintenance_1.Maintenance {
         return Maintenance_1.MaintenanceType.CORRECTIVE;
     }
     execute() {
-        console.log(`\n🚨 Ejecutando Mantenimiento Correctivo: ${this.problem}`);
+        console.log(`\nEjecutando Mantenimiento Correctivo: ${this.problem}`);
         console.log(`   Máquina: ${this.machineId}`);
         console.log(`   Severidad: ${this.severity}`);
         this.setStatus(Maintenance_1.MaintenanceStatus.IN_PROGRESS);
@@ -37,11 +37,11 @@ class CorrectiveMaintenance extends Maintenance_1.Maintenance {
                 console.log(`   - ${part}`);
             });
         }
-        console.log(`   🔨 Diagnosticando problema...`);
-        console.log(`   🔧 Reparando...`);
-        console.log(`   🧪 Probando funcionalidad...`);
+        console.log(`   Diagnosticando problema...`);
+        console.log(`   Reparando...`);
+        console.log(`   Probando funcionalidad...`);
         this.setStatus(Maintenance_1.MaintenanceStatus.COMPLETED);
-        console.log(`   ✅ Reparación completada`);
+        console.log(`  Reparación completada`);
     }
     getEstimatedDuration() {
         // Estimar duración según severidad

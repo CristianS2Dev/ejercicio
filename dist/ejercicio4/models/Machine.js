@@ -82,10 +82,10 @@ class MonitoringMachine extends Machine {
     run() {
         if (this.status === MachineStatus.OPERATIONAL) {
             this.isRunning = true;
-            console.log(`📊 ${this.name} iniciando monitoreo`);
+            console.log(`${this.name} iniciando monitoreo`);
         }
         else {
-            console.log(`❌ ${this.name} no disponible`);
+            console.log(`${this.name} no disponible`);
         }
     }
     stop() {
