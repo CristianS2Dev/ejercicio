@@ -1,27 +1,26 @@
-/**
- * EJERCICIO 4: Gestor de Mantenimientos SOLID
- * 
- * Demostración completa de los 5 principios SOLID
- */
+
+// EJERCICIO 4: Gestor de Mantenimientos SOLID
+ 
+
 
 import { MachineRepository } from "./services/MachineRepository";
-import { LoggerService, LogLevel } from "./services/LoggerService";
+import { LoggerService } from "./services/LoggerService";
 import { EmailNotification } from "./services/EmailNotification";
 import { SMSNotification } from "./services/SMSNotification";
 import { AlertManager } from "./services/AlertManager";
-import { Machine, ProductionMachine, MonitoringMachine, MachineStatus } from "./models/Machine";
+import { ProductionMachine, MonitoringMachine, MachineStatus } from "./models/Machine";
 import { PreventiveMaintenance } from "./models/PreventiveMaintenance";
 import { CorrectiveMaintenance, Severity } from "./models/CorrectiveMaintenance";
 import { Maintenance } from "./models/Maintenance";
 
-console.log("🏗️  EJERCICIO 4: Gestor de Mantenimientos SOLID\n");
+console.log(" EJERCICIO 4: Gestor de Mantenimientos SOLID\n");
 console.log("Demostrando los 5 principios SOLID en acción\n");
 console.log("=".repeat(60));
 
-// ============================================
+
 // PRINCIPIO S - Single Responsibility
-// ============================================
-console.log("\n📌 PRINCIPIO S - Single Responsibility");
+
+console.log("\n PRINCIPIO S - Single Responsibility");
 console.log("Cada clase tiene una única responsabilidad\n");
 
 const logger = new LoggerService();
@@ -29,11 +28,11 @@ logger.info("Sistema de mantenimientos iniciado");
 
 const machineRepo = new MachineRepository();
 
-// ============================================
+
 // PRINCIPIO O - Open/Closed & PRINCIPIO L - Liskov Substitution
-// ============================================
-console.log("\n📌 PRINCIPIO O - Open/Closed");
-console.log("📌 PRINCIPIO L - Liskov Substitution");
+
+console.log("\n PRINCIPIO O - Open/Closed");
+console.log(" PRINCIPIO L - Liskov Substitution");
 console.log("Las clases están abiertas a extensión pero cerradas a modificación");
 console.log("Las subclases pueden sustituir a la clase base\n");
 
@@ -68,25 +67,26 @@ const mantenimientos: Maintenance[] = [
     )
 ];
 
-// ============================================
+
 // PRINCIPIO I - Interface Segregation
-// ============================================
-console.log("\n📌 PRINCIPIO I - Interface Segregation");
+
+console.log("\n PRINCIPIO I - Interface Segregation");
 console.log("Las interfaces son pequeñas y específicas\n");
 
-console.log("Máquina de Producción (IRunnable + ICleanable):");
+console.log("Maquina de Producción (IRunnable + ICleanable):");
 maquina1.run();
 maquina1.stop();
 maquina1.clean();
 
-console.log("\nMáquina de Monitoreo (solo IRunnable):");
+console.log("\nMaquina de Monitoreo (solo IRunnable):");
 maquina3.run();
 maquina3.stop();
 
-// ============================================
+
 // PRINCIPIO D - Dependency Inversion
-// ============================================
-console.log("\n📌 PRINCIPIO D - Dependency Inversion");
+
+
+console.log("\n PRINCIPIO D - Dependency Inversion");
 console.log("Dependemos de abstracciones, no de implementaciones concretas\n");
 
 const emailService = new EmailNotification();
@@ -120,21 +120,21 @@ console.log("CAMBIO DE SERVICIO DE NOTIFICACIÓN");
 console.log("=".repeat(60));
 
 alertManager.changeNotificationService(smsService);
-alertManager.notifyUrgentMaintenance("PROD-003", "Sobrecalentamiento crítico", "+34-600-123-456");
+alertManager.notifyUrgentMaintenance("PROD-003", "Sobrecalentamiento crítico", "+57 3005104130");
 
 // Mostrar logs finales
 console.log("\n" + "=".repeat(60));
 console.log("RESUMEN DEL SISTEMA");
 console.log("=".repeat(60));
 
-console.log("\n📋 Máquinas en el sistema:");
+console.log("\n Máquinas en el sistema:");
 machineRepo.findAll().forEach(m => {
     console.log(`   - ${m.getInfo()}`);
 });
 
-console.log("\n📝 Logs del sistema:");
+console.log("\n Logs del sistema:");
 const logs = logger.getLogs();
 console.log(`   Total de logs: ${logs.length}`);
 logs.slice(-5).forEach(log => console.log(`   ${log}`));
 
-console.log("\n✅ Sistema de mantenimientos SOLID completado exitosamente!");
+console.log("\n Sistema de mantenimientos SOLID completado exitosamente!");

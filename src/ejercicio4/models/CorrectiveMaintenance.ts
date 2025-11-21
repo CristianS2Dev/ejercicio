@@ -38,7 +38,7 @@ export class CorrectiveMaintenance extends Maintenance {
     }
 
     execute(): void {
-        console.log(`\n🚨 Ejecutando Mantenimiento Correctivo: ${this.problem}`);
+        console.log(`\nEjecutando Mantenimiento Correctivo: ${this.problem}`);
         console.log(`   Máquina: ${this.machineId}`);
         console.log(`   Severidad: ${this.severity}`);
         
@@ -51,12 +51,12 @@ export class CorrectiveMaintenance extends Maintenance {
             });
         }
         
-        console.log(`   🔨 Diagnosticando problema...`);
-        console.log(`   🔧 Reparando...`);
-        console.log(`   🧪 Probando funcionalidad...`);
+        console.log(`   Diagnosticando problema...`);
+        console.log(`   Reparando...`);
+        console.log(`   Probando funcionalidad...`);
         
         this.setStatus(MaintenanceStatus.COMPLETED);
-        console.log(`   ✅ Reparación completada`);
+        console.log(`  Reparación completada`);
     }
 
     getEstimatedDuration(): number {

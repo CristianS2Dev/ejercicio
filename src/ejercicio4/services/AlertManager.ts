@@ -25,7 +25,7 @@ export class AlertManager {
     }
 
     public notifyUrgentMaintenance(machineId: string, problem: string, contacto: string): void {
-        const message = `🚨 URGENTE: Máquina ${machineId} requiere atención - ${problem}`;
+        const message = `URGENTE: Máquina ${machineId} requiere atención - ${problem}`;
         this.notificationService.send(contacto, message);
     }
 

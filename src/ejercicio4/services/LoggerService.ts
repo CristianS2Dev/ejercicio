@@ -34,13 +34,13 @@ export class LoggerService {
     private getEmojiForLevel(level: LogLevel): string {
         switch (level) {
             case LogLevel.INFO:
-                return "ℹ️";
+                return "Information";
             case LogLevel.WARNING:
-                return "⚠️";
+                return "Warning";
             case LogLevel.ERROR:
-                return "❌";
+                return "Error";
             case LogLevel.DEBUG:
-                return "🐛";
+                return "Debug";
         }
     }
 

@@ -179,7 +179,7 @@ function intentarLogin(
     username: string,
     password: string
 ): void {
-    console.log(`\n🔐 Intentando login con usuario: "${username}"`);
+    console.log(`\n Intentando login con usuario: "${username}"`);
     
     try {
         const result = authSystem.login(username, password);

@@ -84,14 +84,15 @@ export class ProductionMachine extends Machine implements IRunnable, ICleanable 
  * Máquina que solo puede ejecutarse
  */
 export class MonitoringMachine extends Machine implements IRunnable {
-    private isRunning: boolean = false;
+    
+    public isRunning: boolean = false;
 
     run(): void {
         if (this.status === MachineStatus.OPERATIONAL) {
             this.isRunning = true;
-            console.log(`📊 ${this.name} iniciando monitoreo`);
+            console.log(`${this.name} iniciando monitoreo`);
         } else {
-            console.log(`❌ ${this.name} no disponible`);
+            console.log(`${this.name} no disponible`);
         }
     }
 

@@ -1,5 +1,5 @@
 import { User } from "./User";
-import { IPermissions } from "./interfaces/permisos.interfaces";
+import { IPermissions } from "./interfaces/IPermisos.interfaces";
 
 export class Admin extends User {
     private permissions: IPermissions;

@@ -1,9 +1,6 @@
-/**
- * PRINCIPIO I - Interface Segregation
- * 
- * Interfaz pequeña y específica para máquinas que pueden ejecutarse
- * Solo las máquinas que necesiten este comportamiento lo implementarán
- */
+
+//   PRINCIPIO I - Interface Segregation
+
 
 export interface IRunnable {
     run(): void;

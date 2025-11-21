@@ -19,7 +19,7 @@ export class SMSNotification implements INotificationService {
         console.log(`   API Key: ${this.apiKey}`);
         console.log(`   Para: ${to}`);
         console.log(`   Mensaje: ${message}`);
-        console.log(`   ✅ SMS enviado exitosamente`);
+        console.log(`   SMS enviado exitosamente`);
     }
 
     getServiceName(): string {

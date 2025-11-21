@@ -1,5 +1,5 @@
 import { User } from "./User";
-import { IPurchaseInfo } from "./interfaces/permisos.interfaces";
+import { IPurchaseInfo } from "./interfaces/IPurchaseInfo.interface";
 
 export class Client extends User {
     private purchaseInfo: IPurchaseInfo;
