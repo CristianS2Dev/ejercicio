@@ -1,0 +1,27 @@
+{
+  "name": "ejercicios-typescript",
+  "version": "1.0.0",
+  "description": "Ejercicios prácticos de TypeScript con principios SOLID",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "ejercicio1": "tsc && node dist/ejercicio1/ejercicio1.js",
+    "ejercicio2": "tsc && node dist/ejercicio2/ejercicio2.js",
+    "ejercicio3": "tsc && node dist/ejercicio3/ejercicio3.js",
+    "ejercicio4": "tsc && node dist/ejercicio4/main.js",
+    "clean": "rimraf dist",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "typescript",
+    "solid",
+    "oop",
+    "exercises"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
